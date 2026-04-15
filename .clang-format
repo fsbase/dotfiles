@@ -1,39 +1,81 @@
-# Copyright (c) 2025, hi <hi@nosec.me>. All rights reserved.
-
 BasedOnStyle: LLVM
+Language: C
 
 AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: None
+AlignConsecutiveAssignments: None
 AlignConsecutiveMacros: Consecutive
-AlignConsecutiveAssignments: Consecutive
-AlignConsecutiveDeclarations: Consecutive
-AlignEscapedNewlines: Left
-AlignAfterOpenBracket: AlwaysBreak
+AlignEscapedNewlines: Right
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Left
 
-AllowShortEnumsOnASingleLine: false
-AllowShortLambdasOnASingleLine: None
-AllowShortFunctionsOnASingleLine: Empty
 AllowAllArgumentsOnNextLine: false
 AllowAllParametersOfDeclarationOnNextLine: false
-AlwaysBreakBeforeMultilineStrings: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortCompoundRequirementOnASingleLine: false
+AllowShortLambdasOnASingleLine: None
+AllowShortNamespacesOnASingleLine: false
 
+AlwaysBreakBeforeMultilineStrings: false
+AccessModifierOffset: -4
+
+# BreakAfterOpenBracketFunction: false
 BreakBeforeBinaryOperators: None
 BreakFunctionDefinitionParameters: false
 BreakStringLiterals: false
 BreakArrays: false
 BreakBeforeBraces: Linux
-BinPackArguments: false
-BinPackParameters: false
-PenaltyReturnTypeOnItsOwnLine: 1000
-PenaltyBreakAssignment: 1000
-PenaltyBreakBeforeMemberAccess: 1000
-PenaltyBreakScopeResolution: 1000
+BinPackArguments: true
+BinPackParameters: BinPack
+BitFieldColonSpacing: Both
 BracedInitializerIndentWidth: 4
-IndentWidth: 4
+BreakAdjacentStringLiterals: true
+BreakAfterAttributes: Leave
+BreakTemplateDeclarations: Yes
+
 ContinuationIndentWidth: 4
-AccessModifierOffset: -4
-IndentGotoLabels: true
-SortIncludes: Never
-ColumnLimit: 100
+ColumnLimit: 80
+
+EmptyLineBeforeAccessModifier: Leave
 FixNamespaceComments: true
+
+IndentExportBlock: false
+IndentExternBlock: NoIndent
+IndentGotoLabels: false
+IndentRequiresClause: false
+IndentWidth: 4
+InsertNewlineAtEOF: true
+
+KeepEmptyLines:
+  AtEndOfFile: false
+  AtStartOfBlock: false
+  AtStartOfFile: false
+
+LambdaBodyIndentation: OuterScope
+LineEnding: LF
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+
+PenaltyReturnTypeOnItsOwnLine: 10000
+PenaltyBreakAssignment: 10000
+PenaltyBreakBeforeMemberAccess: 10000
+PenaltyBreakScopeResolution: 10000
+
+ReflowComments: Never
+RemoveEmptyLinesInUnwrappedLines: true
+
+SortIncludes:
+  Enabled: false
+
+# 防止像 Qt 中的 emit 这样的函数被误认为是标识符
+StatementAttributeLikeMacros: []
+# 像 Q_UNUSED(x) 这样的宏需要解释为完整的语句
+StatementMacros: []
+# 像 LIST_ENTRY(x) 这样的宏需要解释为类型声明
+TypenameMacros: []
+
+UseTab: Never
 
 ForEachMacros: []

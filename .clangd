@@ -1,16 +1,19 @@
-# Copyright (c) 2025, hi <hi@nosec.me>. All rights reserved.
-
 CompileFlags:
   CompilationDatabase: build/
   Add:
     - -std=c99
   Remove: []
 
+Completion:
+  ArgumentLists: Delimiters
+  HeaderInsertion: Never
+  CodePatterns: All
+
 Index:
   Background: Skip
 
 Diagnostics:
-  UnusedIncludes: Strict
+  UnusedIncludes: None
   ClangTidy:
     FastCheckFilter: Strict
     Add:
@@ -84,7 +87,6 @@ Diagnostics:
       - google-runtime-operator
       - hicpp-exception-baseclass
       - hicpp-multiway-paths-covered
-      - hicpp-signed-bitwise
       - misc-misplaced-const
       - misc-new-delete-overloads
       - misc-no-recursion
@@ -157,12 +159,9 @@ Diagnostics:
       - readability-static-definition-in-anonymous-namespace
       - readability-string-compare
       - readability-uniqueptr-delete-release
-    Remove: []
+    Remove:
+      - hicpp-signed-bitwise
 
 InlayHints:
   Enabled: false
-  BlockEnd: false
-  Designators: true
-  ParameterNames: true
-  DeducedTypes: true
   TypeNameLimit: 24

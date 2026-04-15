@@ -1,7 +1,7 @@
 " Install
 "
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" curl -fLo ~/.vimrc https://raw.githubusercontent.com/h1wind/dotfiles/main/.vimrc
+" curl -fLo ~/.vimrc https://raw.githubusercontent.com/fsbase/dotfiles/main/.vimrc
 "
 " Open vim and run: PlugInstall
 "
